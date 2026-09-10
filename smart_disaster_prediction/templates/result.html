@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flood Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="header">
+
+        <div class="main-icon">🌊</div>
+
+        <h1>Prediction Result</h1>
+
+        <p>Smart Flood Risk Analysis</p>
+
+    </div>
+
+
+    <div class="input-card water">
+
+        <div class="icon">⚠️</div>
+
+        <div class="field">
+
+            <label>Risk Level</label>
+
+            <span>Predicted flood danger level</span>
+
+            <h2 style="color:#dc2626; margin-top:10px;">
+                {{ risk_level }}
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="input-card rainfall">
+
+        <div class="icon">📊</div>
+
+        <div class="field">
+
+            <label>Risk Score</label>
+
+            <span>Model prediction confidence score</span>
+
+            <h2 style="color:#2563eb; margin-top:10px;">
+                {{ risk_score }}%
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="input-card temperature">
+
+        <div class="icon">🚨</div>
+
+        <div class="field">
+
+            <label>Prediction Message</label>
+
+            <span>{{ message }}</span>
+
+        </div>
+
+    </div>
+
+
+    <a href="/"
+       style="
+       display:block;
+       text-align:center;
+       color:white;
+       text-decoration:none;
+       margin-top:25px;
+       font-weight:bold;
+       font-size:17px;">
+       ← Try Another Prediction
+    </a>
+
+</div>
+
+</body>
+
+</html>

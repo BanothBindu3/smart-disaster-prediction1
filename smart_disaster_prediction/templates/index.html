@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Disaster Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="header">
+        <div class="main-icon">🌪️</div>
+        <h1>Smart Disaster Prediction</h1>
+        <p>AI-Powered Flood Risk Prediction System</p>
+    </div>
+
+    <form action="/predict" method="POST">
+
+        <div class="input-card rainfall">
+            <div class="icon">🌧️</div>
+            <div class="field">
+                <label>Rainfall</label>
+                <span>Rainfall received in the area</span>
+                <input type="number"
+                       name="rainfall"
+                       step="0.01"
+                       placeholder="Enter rainfall"
+                       required>
+                <small>Unit: mm</small>
+            </div>
+        </div>
+
+
+        <div class="input-card temperature">
+            <div class="icon">🌡️</div>
+            <div class="field">
+                <label>Temperature</label>
+                <span>Current atmospheric temperature</span>
+                <input type="number"
+                       name="temperature"
+                       step="0.01"
+                       placeholder="Enter temperature"
+                       required>
+                <small>Unit: °C</small>
+            </div>
+        </div>
+
+
+        <div class="input-card humidity">
+            <div class="icon">💧</div>
+            <div class="field">
+                <label>Humidity</label>
+                <span>Amount of moisture in the air</span>
+                <input type="number"
+                       name="humidity"
+                       step="0.01"
+                       placeholder="Enter humidity"
+                       required>
+                <small>Unit: %</small>
+            </div>
+        </div>
+
+
+        <div class="input-card wind">
+            <div class="icon">🌬️</div>
+            <div class="field">
+                <label>Wind Speed</label>
+                <span>Current wind speed</span>
+                <input type="number"
+                       name="wind_speed"
+                       step="0.01"
+                       placeholder="Enter wind speed"
+                       required>
+                <small>Unit: km/h</small>
+            </div>
+        </div>
+
+
+        <div class="input-card water">
+            <div class="icon">🌊</div>
+            <div class="field">
+                <label>Water Level</label>
+                <span>Current water level</span>
+                <input type="number"
+                       name="water_level"
+                       step="0.01"
+                       placeholder="Enter water level"
+                       required>
+                <small>Unit: metres</small>
+            </div>
+        </div>
+
+
+        <button type="submit">
+            🔍 Predict Flood Risk
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
